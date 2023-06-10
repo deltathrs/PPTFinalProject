@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Book - Book Store Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .input-container label {
+      width: 150px;
+      font-weight: bold;
+      color: #666;
+    }
+
+    input[type="text"],
+    select,
+    input[type="date"],
+    input[type="number"] {
+      flex: 1;
+      padding: 5px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book Store Management System</h1>
+
+  <!-- Add Book -->
+  <div class="container">
+    <h2>Add Book</h2>
+    <form id="booksForm">
+      <fieldset>
+        <legend>Book Details</legend>
+        <div class="input-container">
+          <label for="bookTitle">Book Title:</label>
+          <input type="text" id="bookTitle" required>
+        </div>
+        <div class="input-container">
+          <label for="bookAuthor">Author:</label>
+          <input type="text" id="bookAuthor" required>
+        </div>
+        <div class="input-container">
+          <label for="bookPublisher">Publisher:</label>
+          <input type="text" id="bookPublisher" required>
+        </div>
+        <div class="input-container">
+          <label for="publicationDate">Publication Date:</label>
+          <input type="date" id="publicationDate" required>
+        </div>
+        <div class="input-container">
+          <label for="isbn">ISBN:</label>
+          <input type="text" id="isbn" required>
+        </div>
+        <div class="input-container">
+          <label for="price">Price:</label>
+          <input type="number" id="price" required>
+        </div>
+        <div class="input-container">
+          <label for="stockQuantity">Stock Quantity:</label>
+          <input type="number" id="stockQuantity" required>
+        </div>
+        <div class="input-container">
+          <label for="genre">Genre:</label>
+          <select id="genre" required>
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Science Fiction">Science Fiction</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Thriller">Thriller</option>
+          </select>
+        </div>
+      </fieldset>
+      <br>
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+
+  <!-- Books List -->
+  <div class="container">
+    <h2>Books List</h2>
+    <ul id="booksList"></ul>
+  </div>
+</body>
+</html>
